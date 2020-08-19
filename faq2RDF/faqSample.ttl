@@ -1,0 +1,223 @@
+@prefix schema: <http://schema.org/>.
+@prefix pcv: <https://www.w3id.org/onto/pcv#>.
+@prefix pcr: <http://data.patient-covid19.org/resource/> .
+@prefix pcrf: <http://data.patient-covid19.org/resource/faq/> .
+@prefix pcrq: <http://data.patient-covid19.org/resource/question/> .
+@prefix pcra: <http://data.patient-covid19.org/resource/answer/> .
+@prefix pcro: <http://data.patient-covid19.org/resource/org/> .
+@prefix wd: <https://www.wikidata.org/entity/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# QA Page triples with questions and answers. 
+#QA sante gouv. 
+#wikidata uri: wd:Q3315346
+pcrf:santegouv a schema:QAPage;
+	schema:dateCreated "2020-03-31"^^xsd:date ;
+	schema:dateModified "2020-07-20"^^xsd:date ;
+	schema:inLanguage "French"; #use iso-code instead?
+	schema:datePublished "2020-03-31"^^xsd:date;
+	schema:creator pcro:org1  ;
+	
+	schema:url <https://solidarites-sante.gouv.fr/soins-et-maladies/maladies/maladies-infectieuses/coronavirus/tout-savoir-sur-la-covid-19/article/reponses-a-vos-questions-sur-le-covid-19> ;
+	pcv:hasQuestion pcrq:1 , pcrq:2 , pcrq:3 , pcrq:4, pcrq:5, pcrq:6, pcrq:7, pcrq:8, pcrq:9, pcrq:10, pcrq:11, pcrq:12 ,
+	pcrq:13 , pcrq:14 ;
+	.
+
+pcro:org1 a org:Organization ; 
+	rdfs:label "Ministère des solidarités et de la santé"@fr ; 
+	schema:url <https://solidarites-sante.gouv.fr/>; 
+	owl:sameAs wd:Q3315346;
+	.
+	
+## triples for questions here 	
+pcrq:1 a schema:Question ; 
+	pcv:isQuestionOf  pcrf:santegouv ;
+	schema:text "Qu'est-ce que le coronavirus?"@fr ;
+	schema:acceptedAnswer pcra:1 ; 
+	.
+
+## associated answer. 	
+pcra:1 a schema:Answer ;
+	a schema:Answer ;
+	schema:text """  Les coronavirus sont une famille de virus, qui provoquent des maladies allant d’un simple rhume (certains virus saisonniers sont des coronavirus) à des pathologies plus sévères comme le MERS-CoV ou le SRAS.
+						Le virus identifié en janvier 2020 en Chine est un nouveau coronavirus, nommé SARS-CoV-2. La maladie provoquée par ce coronavirus a été nommée COVID-19 par l’Organisation mondiale de la Santé - OMS. Depuis le 11 mars 2020, l’OMS qualifie la situation mondiale de la COVID-19 de pandémie ; c’est-à-dire que l’épidémie est désormais mondiale."""@fr;
+	.
+	
+pcrq:2 a schema:Question ; 
+	pcv:isQuestionOf  pcrf:santegouv ;
+	schema:text "D’où vient le coronavirus à l’origine de la COVID-19 ?"@fr ;
+	schema:acceptedAnswer pcra:2 ;
+	pcv:isQuestionOf pcrf:santegouv ;
+	.
+
+
+pcrq:3 a schema:Question ; 
+	pcv:isQuestionOf  pcrf:santegouv ;
+	schema:text "Quels sont les symptômes de la COVID-19 ?"@fr ;
+	schema:acceptedAnswer pcra:3 ;
+	pcv:isQuestionOf pcrf:santegouv ;
+	.
+	
+pcrq:4 a schema:Question ; 
+	pcv:isQuestionOf  pcrf:santegouv ;
+	schema:text "Quel est le délai d’incubation de la maladie ?"@fr ;
+	schema:acceptedAnswer pcra:4 ;
+	pcv:isQuestionOf pcrf:santegouv ;
+	.
+	
+	
+pcrq:5 a schema:Question ; 
+	pcv:isQuestionOf  pcrf:santegouv ;
+	schema:text "Le virus a-t-il muté ?"@fr ;
+	schema:acceptedAnswer pcra:5 ;
+	pcv:isQuestionOf pcrf:santegouv ;
+	.
+	
+
+pcrq:6 a schema:Question ; 
+	pcv:isQuestionOf  pcrf:santegouv ;
+	schema:text "Comment se transmet la COVID-19 ?"@fr ;
+	schema:acceptedAnswer pcra:6 ;
+	pcv:isQuestionOf pcrf:santegouv ;
+	.
+
+pcrq:7 a schema:Question ; 
+	pcv:isQuestionOf  pcrf:santegouv ;
+	schema:text "Peut-on être en contact d’un malade sans être contaminé ?"@fr ;
+	schema:acceptedAnswer pcra:7 ;
+	pcv:isQuestionOf pcrf:santegouv ;
+	.	
+
+pcrq:8 a schema:Question ; 
+	pcv:isQuestionOf  pcrf:santegouv ;
+	schema:text "Le virus circule-t-il dans l’air ?"@fr ;
+	schema:acceptedAnswer pcra:8 ;
+	pcv:isQuestionOf pcrf:santegouv ;
+	.
+
+pcrq:9 a schema:Question ; 
+	pcv:isQuestionOf  pcrf:santegouv ;
+	schema:text "Combien de temps le virus de la COVID-19 peut-il vivre sur une surface ?"@fr ;
+	schema:acceptedAnswer pcra:9 ;
+	pcv:isQuestionOf pcrf:santegouv ;
+	.
+	
+pcrq:10 a schema:Question ; 
+	pcv:isQuestionOf  pcrf:santegouv ;
+	schema:text "Les moustiques peuvent-ils transmettre le virus ?"@fr ;
+	schema:acceptedAnswer pcra:10 ;
+	pcv:isQuestionOf pcrf:santegouv ;
+	.
+	
+pcrq:11 a schema:Question ; 
+	pcv:isQuestionOf  pcrf:santegouv ;
+	schema:text "Peut-on attraper la maladie par l’eau ?"@fr ;
+	schema:acceptedAnswer pcra:11 ;
+	pcv:isQuestionOf pcrf:santegouv ;
+	.
+	
+pcrq:12 a schema:Question ; 
+	pcv:isQuestionOf  pcrf:santegouv ;
+	schema:text "Existe-t-il des risques liés aux animaux domestiques (d’élevage et familiers) ?"@fr ;
+	schema:acceptedAnswer pcra:12 ;
+	pcv:isQuestionOf pcrf:santegouv ;
+	.
+
+pcrq:13 a schema:Question ; 
+	pcv:isQuestionOf  pcrf:santegouv ;
+	schema:text "Existe-t-il des risques liés aux aliments ?"@fr ;
+	schema:acceptedAnswer pcra:13 ;
+	pcv:isQuestionOf pcrf:santegouv ;
+	.	
+	
+pcrq:14 a schema:Question ; 
+	pcv:isQuestionOf  pcrf:santegouv ;
+	schema:text "Comment éliminer mes déchets contaminés par le coronavirus ?"@fr ;
+	schema:acceptedAnswer pcra:14 ;
+	pcv:isQuestionOf pcrf:santegouv ;
+	.
+
+	
+pcra:2 a schema:Answer ;
+	a schema:Answer ;
+	schema:text """ Les premières personnes à avoir contracté le virus s’étaient rendues au marché de Wuhan dans la province de Hubei, en Chine. La maladie semblerait donc venir d’un animal (zoonose) mais l’origine n’a pas été confirmée. """@fr ;
+	
+	.
+	
+pcra:3 a schema:Answer ;
+	a schema:Answer ;
+	schema:text """ Les symptômes principaux sont la fièvre ou la sensation de fièvre et la toux.
+
+La perte brutale de l’odorat, sans obstruction nasale et disparition totale du goût sont également des symptômes qui ont été observés chez les malades.
+
+Chez les personnes développant des formes plus graves, on retrouve des difficultés respiratoires, pouvant mener jusqu’à une hospitalisation en réanimation et au décès. """@fr ;
+	.
+		
+pcra:4 a schema:Answer ;
+	a schema:Answer ;
+	schema:text """ Le délai d’incubation est la période entre la contamination et l’apparition des premiers symptômes. Le délai d’incubation de la COVID-19 est de 3 à 5 jours en général, il peut toutefois s’étendre jusqu’à 14 jours. Pendant cette période, le sujet peut être contagieux : il peut être porteur du virus avant l’apparition des symptômes ou à l’apparition de signaux faibles."""@fr ;
+	.
+	
+pcra:5 a schema:Answer ;
+	a schema:Answer ;
+	schema:text """" À ce jour il n’existe pas d’arguments scientifiques suffisamment robustes en cette faveur. Les travaux de recherche se poursuivent aujourd’hui pour mieux connaître le virus.Il convient de rappeler que la grande majorité des mutations des virus sont neutres, et le reste plus souvent bénéfiques pour l’Homme que l’inverse. 
+	En effet, dans la majorité des épidémies, les virus évoluent vers moins de dangerosité mais plus de diffusion."""@fr ;
+	.
+	
+pcra:6 a schema:Answer ;
+	a schema:Answer ;
+	schema:text """ La maladie se transmet par les gouttelettes (sécrétions projetées invisibles lors d’une discussion, d’éternuements ou de la toux). On considère donc qu’un contact étroit avec une personne malade est nécessaire pour transmettre la maladie : même lieu de vie, contact direct à moins d’un mètre lors d’une discussion, d’une toux, d’un éternuement ou en l’absence de mesures de protection.
+
+Un des autres vecteurs privilégiés de la transmission du virus est le contact des mains non lavées souillées par des gouttelettes.
+
+C’est donc pourquoi les gestes barrières et les mesures de distanciation sociale sont indispensables pour se protéger de la maladie."""@fr ;
+	.
+	
+pcra:7 a schema:Answer ;
+	a schema:Answer ;
+	schema:text """ Le risque est toujours présent, et plus le contact est long et rapproché, plus le risque de contamination augmente (plus de 15 minutes, à moins d’un mètre). C’est la raison pour laquelle la distanciation sociale et les mesures barrières doivent être appliquées. Il est donc possible de vivre avec un cas COVID-19 à domicile si l’on respecte scrupuleusement les gestes barrières."""@fr ;
+	.
+	
+pcra:8 a schema:Answer ;
+	a schema:Answer ;
+	schema:text """ Non, il ne peut pas vivre dans l’air tout seul. Le coronavirus responsable du COVID-19 se transmet par les gouttelettes, qui sont les sécrétions respiratoires qu’on émet quand on tousse, qu’on éternue ou qu’on parle.Le virus est transporté par les gouttelettes, il ne circule pas dans l’air tout seul, mais peut atteindre une personne à proximité (<1 mètre) ou se fixer sur une surface souillée par les gouttelettes, comme les mains ou les mouchoirs. C’est pour cela qu’il est important de respecter les gestes barrières et les mesures de distanciation sociale."""@fr ;
+	.
+	
+pcra:9 a schema:Answer ;
+	a schema:Answer ;
+	schema:text """ Dans des conditions propices à sa survie, le virus pourrait survivre, sous forme de traces, plusieurs jours sur une surface. Toutefois, ce n’est pas parce qu’un peu de virus survit que cela est suffisant pour contaminer une personne qui toucherait cette surface. En effet, au bout de quelques heures, la grande majorité du virus meurt et n’est probablement plus contagieux. Pour rappel, la grande transmissibilité de la COVID-19 n’est pas liée à sa survie sur les surfaces, mais à sa transmission quand on tousse, qu’on éternue, qu’on discute ou par les gouttelettes expulsées et transmises par les mains. C’est pour cela qu’il est important de respecter les gestes barrières et les mesures de distanciation sociale."""@fr ;
+	.
+	
+pcra:10 a schema:Answer ;
+	a schema:Answer ;
+	schema:text """ Non il n’existe aucune preuve de transmission du virus à travers les moustiques, ou tout autre animal d’ailleurs. La COVID-19 se transmet entre humains, via les gouttelettes respiratoires."""@fr ;
+	.
+
+pcra:11 a schema:Answer ;
+	a schema:Answer ;
+	schema:text """ À ce jour, il n’a pas été rapporté de contamination par l’eau. Cette maladie est à transmission interhumaine par la voie des gouttelettes (toux, éternuements, mains souillées par les gouttelettes). La source originelle du virus n’est pas encore identifiée mais semble d’origine animale."""@fr ;
+	.
+
+pcra:12 a schema:Answer ;
+	a schema:Answer ;
+	schema:text """ Il n’existe aucune preuve que les animaux domestiques jouent un rôle dans la propagation coronavirus COVID-19. De plus, le passage du coronavirus COVID-19 de l’être humain vers une autre espèce animale semble peu probable."""@fr ;
+	.
+	
+pcra:13 a schema:Answer ;
+	a schema:Answer ;
+	schema:text """ Au vu des informations disponibles, le passage du coronavirus COVID-19 de l’être humain vers une autre espèce animale semble actuellement peu probable, et la possible contamination des denrées alimentaires d’origine animale (DAOA) à partir d’un animal infecté par la COVID-19 est exclue.
+
+Les aliments crus ou peu cuits ne présentent pas de risques de transmission d’infection particuliers, dès lors que les bonnes règles d’hygiène habituelles sont respectées lors de la manipulation et de la préparation des denrées alimentaires."""@fr ;
+	.
+	
+pcra:14 a schema:Answer ;
+	a schema:Answer ;
+	schema:text """ L’élimination des déchets contaminés ou susceptibles d’être contaminés par le Coronavirus (masques, mouchoirs à usage unique et bandeaux pour le nettoyage des surfaces des habitations) chez les personnes malades ou susceptibles d’être infectées incombe aux particuliers."""@fr ;
+	rdfs:seeAlso <https://solidarites-sante.gouv.fr/IMG/pdf/fiche_covid19_dechets_contamines_elimination_particulier_20200323_vf.pdf> ;
+	.
+
